@@ -54,9 +54,9 @@
     NSMutableDictionary *dictInfo = [NSMutableDictionary dictionaryWithDictionary:dict];
     
     // modify dict before add
-    NSMutableDictionary *exifDictInfo = [NSMutableDictionary dictionaryWithDictionary:[dictInfo valueForKey:(NSString *)kCGImagePropertyExifDictionary]];
+    NSMutableDictionary *exifDictInfo = [NSMutableDictionary dictionaryWithDictionary:[dictInfo valueForKey:(NSString *)kCGImagePropertyIPTCDictionary]];
     [exifDictInfo setValue:@"花花" forKey:(NSString*)kCGImagePropertyIPTCOriginatingProgram];
-    [exifDictInfo setValue:@"1.0.2" forKey:(NSString*)kCGImagePropertyIPTCProgramVersion];
+    [exifDictInfo setValue:@"1.0.9" forKey:(NSString*)kCGImagePropertyIPTCProgramVersion];
     [dictInfo setValue:exifDictInfo forKey:(NSString*)kCGImagePropertyIPTCDictionary];
     
     CFStringRef UTI = CGImageSourceGetType(mySourceRef);
